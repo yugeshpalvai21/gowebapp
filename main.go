@@ -26,7 +26,5 @@ func main() {
 	if err := http.ListenAndServe(serverAddress, nil); err != nil {
 		fmt.Println("Somethinf went wrong while starting server")
 		panic(err)
-	} else {
-		fmt.Println("SERVER IS RUNNING ON PORT 3000")
 	}
 }
