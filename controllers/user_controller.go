@@ -8,7 +8,7 @@ import (
 
 type UserController struct{}
 
-func (uc *UserController) GetUserByID(w http.ResponseWriter, r http.Request) {
+func (uc *UserController) GetUserByID(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	w.WriteHeader(http.StatusOK)
 
@@ -22,6 +22,5 @@ func (uc *UserController) GetUserByID(w http.ResponseWriter, r http.Request) {
 	}
 
 	w.Write(jsonResp)
-
 	return
 }
